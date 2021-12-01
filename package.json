@@ -1,0 +1,20 @@
+{
+  "name": "CameronSchwartz_hw5_csi2520_fs2021",
+  "version": "1.0.0",
+  "description": "Fourth Homework Assignment",
+  "main": "comment_box.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CamSchwartz96/CameronSchwartz_hw5_csi2520_fs2021.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CamSchwartz96/CameronSchwartz_hw5_csi2520_fs2021/issues"
+  },
+  "homepage": "https://github.com/CamSchwartz96/CameronSchwartz_hw5_csi2520_fs2021#readme"
+}
