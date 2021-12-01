@@ -4,19 +4,53 @@ const fs = require("fs");
 const { create } = require("domain");
 
 const server = http.createServer((req, res) => {
-  
-  let filePath = path.join(
-    __dirname,
-    "public",
-    req.url === "/" ? "index.html" : req.url
-  );
+    if(req.method == 'GET' && req.url == '/')
+    {
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'text/html');
+        fs.createReadStream('./index.html').pipe(res);
+    }
+    else if(req.method == 'GET' && req.url == '/style_sheet.css')
+    {
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'text/css');
+        fs.createReadStream('./style_sheet.css').pipe(res);
+    }
+    else if(req.method == "GET" && req.url == '/home')
+    {
+        res.statusCode == 200;
+        res.setHeader('Content-Type', 'application/json');
+    }
+    else if(req.method == "POST" && req.url == "/insert")
+    {
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'text/plain');
 
-  
-  let extName = path.extname(filePath);
+        var content = '';
+        req.on('data', function(data){
+            content += data;
 
-  
-  let contentType = "text/html";
+            var obj = JSON.parse(content);
 
+            console.log("The UserName is: "+ obj.name);
+            console.log("The comment is: "+ obj.message);
+            var conn = con.getConnection();
+
+            conn.query('INSERT INTO comments.comments (comments.userName, comments.comment) VALUES (?,?)',[obj.name,obj.message], function(error, results, fields){
+            if(error) throw error;
+            console.log("Success!");
+        });
+
+        conn.end();
+        res.end("Success!");
+        });
+    }
+    else if(req.method == "GET" && req.url == '/comment_box.js')
+    {
+        res.writeHead(200, {"Content-Type":"text/javascript"});
+        fs.createReadStream("./comment_box.js").pipe(res);
+    }
+});
   
   switch (extName) {
     case ".js":
@@ -54,10 +88,10 @@ const server = http.createServer((req, res) => {
         res.end(`Server Error ${err.code}`);
       }
     } else {
+
       res.writeHead(200, { "Content-Type": contentType });
       res.end(content, "utf8");
     }
-  });
 });
 
 const PORT = process.env.PORT || 3000;
