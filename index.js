@@ -9,21 +9,6 @@ const server = http.createServer((req, res) => {
     "public",
     req.url === "/" ? "index.html" : req.url
   );
-  let filePath = path.join(
-    __dirname,
-    "public",
-    req.url === "/" ? "blog.html" : req.url
-  );
-  let filePath = path.join(
-    __dirname,
-    "public",
-    req.url === "/" ? "my_fun_facts.html" : req.url
-  );
-  let filePath = path.join(
-    __dirname,
-    "public",
-    req.url === "/" ? "my_resume.html" : req.url
-  );
 
   let extName = path.extname(filePath);
 
