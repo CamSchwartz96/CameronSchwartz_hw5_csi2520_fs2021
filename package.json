@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/CamSchwartz96/CameronSchwartz_hw5_csi2520_fs2021/issues"
   },
-  "homepage": "https://github.com/CamSchwartz96/CameronSchwartz_hw5_csi2520_fs2021#readme"
+  "homepage": "https://github.com/CamSchwartz96/CameronSchwartz_hw5_csi2520_fs2021#readme",
+  "dependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
