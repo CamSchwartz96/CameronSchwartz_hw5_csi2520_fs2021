@@ -14,6 +14,8 @@ const server = http.createServer((req, res) => {
 
   let contentType = "text/html";
 
+  console.log(path.join(__dirname, 'html', 'blog.html'));
+
   switch (extName) {
     case ".js":
       contentType = "text/javascript";

@@ -1,16 +1,21 @@
 {
   "name": "CameronSchwartz_hw5_csi2520_fs2021",
   "version": "1.0.0",
-  "description": "Fourth Homework Assignment",
-  "main": "comment_box.js",
+  "description": "5th Homework Assignment",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CamSchwartz96/CameronSchwartz_hw5_csi2520_fs2021.git"
   },
-  "keywords": [],
+  "keywords": [
+    "nodejs",
+    "js",
+    "html",
+    "css"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
