@@ -4,6 +4,7 @@
   "description": "5th Homework Assignment",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon",
     "start": "node index"
   },
   "repository": {
@@ -14,7 +15,8 @@
     "nodejs",
     "js",
     "html",
-    "css"
+    "css",
+    "expressjs"
   ],
   "author": "",
   "license": "ISC",
@@ -23,6 +25,13 @@
   },
   "homepage": "https://github.com/CamSchwartz96/CameronSchwartz_hw5_csi2520_fs2021#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
+    "expess": "0.0.1-security",
+    "express": "^4.17.1",
+    "handlebars": "^4.7.7",
+    "moment": "^2.29.1"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.15"
   }
 }
