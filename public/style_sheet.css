@@ -167,9 +167,9 @@ body {
   }
 
   h4 {
-    text-align: center;
-    margin-top: 55px;
-    margin-bottom: 55px;
+    text-align: left;
+    margin-top: 25px;
+    margin-bottom: 25px;
   }
 
   .card-body{
@@ -177,12 +177,8 @@ body {
   }
 
   #main-content{
-    text-align: center;
-    margin-top: 15px;
-  }
-
-  #name{
-    margin: 0 auto;
+    text-align: left;
+    margin-top: 10px;
   }
 
   button{
