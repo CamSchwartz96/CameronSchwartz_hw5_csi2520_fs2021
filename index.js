@@ -24,6 +24,10 @@ app.get("/facts", (req, res) => {
     res.render("facts")
 });
 
+app.get("/trivia", (req, res) => {
+    res.render("trivia")
+});
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => console.log(`Server running on ${PORT}`));
